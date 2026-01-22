@@ -1,4 +1,6 @@
 # Byte-compiled / optimized / DLL files
+DATASETS/nnUnet_results/
+
 __pycache__/
 *.py[cod]
 *$py.class
