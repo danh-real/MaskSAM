@@ -8,10 +8,10 @@ from copy import deepcopy
 from datetime import datetime
 from time import time, sleep
 from typing import Union, Tuple, List
-from nnunetv2.training.loss.criterion import SetCriterion, SetCriterion_RemoveSamplePoints
-from nnunetv2.training.loss.matcher import HungarianMatcher, HungarianMatcherAndAux, HungarianMatcherAndAux_2_4, HungarianMatcherAndAux_RemoveSamplePoints
+from nnunetv2.training.loss.criterion import SetCriterion
+from nnunetv2.training.loss.matcher import HungarianMatcherAndAux_2_4
 from einops import rearrange
-from nnunetv2.utilities.cc_torch import connected_components_labeling
+# from nnunetv2.utilities.cc_torch.connected_components import connected_components_labeling
 from torch.nn import functional as F
 
 import numpy as np

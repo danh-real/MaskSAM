@@ -91,7 +91,7 @@ sam_model_registry = {
     "vit_b_adapter_2024_acdc_patch1024_tqreshape": build_sam_vit_b_adapter_2024_acdc_patch1024_tqreshape,
     "vit_h_adapter_2024_acdc_smallpatch_tqreshape": build_sam_vit_h_adapter_2024_acdc_smallpatch_tqreshape,
     "vit_h_adapter_2024_amos_patch512_tqreshape": build_sam_vit_h_adapter_2024_amos_patch512_tqreshape,
-    }
+}
 
 
 def _build_sam(

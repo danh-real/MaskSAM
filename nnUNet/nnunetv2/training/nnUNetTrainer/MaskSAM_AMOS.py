@@ -4,52 +4,26 @@ import os
 import shutil
 import sys
 import warnings
+from tqdm import tqdm
 from copy import deepcopy
 from datetime import datetime
 from time import time, sleep
 from typing import Union, Tuple, List
-from nnunetv2.training.loss.criterion import SetCriterion, SetCriterion_RemoveSamplePoints
-from nnunetv2.training.loss.matcher import HungarianMatcher, HungarianMatcherAndAux, HungarianMatcherAndAux_2_4, HungarianMatcherAndAux_RemoveSamplePoints
+from nnunetv2.training.loss.criterion import SetCriterion
+from nnunetv2.training.loss.matcher import HungarianMatcherAndAux_2_4
 from einops import rearrange
-from nnunetv2.utilities.cc_torch import connected_components_labeling
 from torch.nn import functional as F
 from nnunetv2.sam.sam_model_2024_amos_smallpatch_finallayercnn_tqreshape_patch512 import SAMAdapter_2024_AMOS_SmallPatch_FinalLayerCNN_TQReshape_Patch512
 
 import numpy as np
 import torch
 from batchgenerators.dataloading.single_threaded_augmenter import SingleThreadedAugmenter
-from batchgenerators.transforms.abstract_transforms import AbstractTransform, Compose
-from batchgenerators.transforms.color_transforms import BrightnessMultiplicativeTransform, \
-    ContrastAugmentationTransform, GammaTransform
-from batchgenerators.transforms.noise_transforms import GaussianNoiseTransform, GaussianBlurTransform
-from batchgenerators.transforms.resample_transforms import SimulateLowResolutionTransform
-from batchgenerators.transforms.spatial_transforms import SpatialTransform, MirrorTransform
-from batchgenerators.transforms.utility_transforms import RemoveLabelTransform, RenameTransform, NumpyToTensor
-from batchgenerators.utilities.file_and_folder_operations import join, load_json, isfile, save_json, maybe_mkdir_p
-from torch._dynamo import OptimizedModule
+from batchgenerators.utilities.file_and_folder_operations import join, load_json, isfile, save_json
 
-from nnunetv2.configuration import ANISO_THRESHOLD, default_num_processes
-from nnunetv2.evaluation.evaluate_predictions import compute_metrics_on_folder
-from nnunetv2.inference.export_prediction import export_prediction_from_logits, resample_and_save
-from nnunetv2.inference.predict_from_raw_data import nnUNetPredictor
-from nnunetv2.inference.sliding_window_prediction import compute_gaussian
-from nnunetv2.paths import nnUNet_preprocessed, nnUNet_results
-from nnunetv2.training.data_augmentation.compute_initial_patch_size import get_patch_size
-from nnunetv2.training.data_augmentation.custom_transforms.cascade_transforms import MoveSegAsOneHotToData, \
-    ApplyRandomBinaryOperatorTransform, RemoveRandomConnectedComponentFromOneHotEncodingTransform
-from nnunetv2.training.data_augmentation.custom_transforms.deep_supervision_donwsampling import \
-    DownsampleSegForDSTransform2
-from nnunetv2.training.data_augmentation.custom_transforms.limited_length_multithreaded_augmenter import \
-    LimitedLenWrapper
-from nnunetv2.training.data_augmentation.custom_transforms.masking import MaskTransform
-from nnunetv2.training.data_augmentation.custom_transforms.region_based_training import \
-    ConvertSegmentationToRegionsTransform
-from nnunetv2.training.data_augmentation.custom_transforms.transforms_for_dummy_2d import Convert2DTo3DTransform, \
-    Convert3DTo2DTransform
 from nnunetv2.training.dataloading.data_loader_2d import nnUNetDataLoader2D
 from nnunetv2.training.dataloading.data_loader_3d import nnUNetDataLoader3D
 from nnunetv2.training.dataloading.nnunet_dataset import nnUNetDataset
-from nnunetv2.training.dataloading.utils import get_case_identifiers, unpack_dataset
+from nnunetv2.training.dataloading.utils import get_case_identifiers
 from nnunetv2.training.logging.nnunet_logger import nnUNetLogger
 from nnunetv2.training.loss.compound_losses import DC_and_CE_loss, DC_and_BCE_loss
 from nnunetv2.training.loss.deep_supervision import DeepSupervisionWrapper
@@ -57,11 +31,8 @@ from nnunetv2.training.loss.dice import get_tp_fp_fn_tn, MemoryEfficientSoftDice
 from nnunetv2.training.lr_scheduler.polylr import PolyLRScheduler
 from nnunetv2.utilities.collate_outputs import collate_outputs
 from nnunetv2.utilities.default_n_proc_DA import get_allowed_n_proc_DA
-from nnunetv2.utilities.file_path_utilities import check_workers_alive_and_busy
-from nnunetv2.utilities.get_network_from_plans import get_network_from_plans
 from nnunetv2.utilities.helpers import empty_cache, dummy_context
-from nnunetv2.utilities.label_handling.label_handling import convert_labelmap_to_one_hot, determine_num_input_channels
-from nnunetv2.utilities.plans_handling.plans_handler import PlansManager, ConfigurationManager
+from nnunetv2.utilities.label_handling.label_handling import determine_num_input_channels
 from sklearn.model_selection import KFold
 from torch import autocast, nn
 from torch import distributed as dist
@@ -71,13 +42,6 @@ from torch.nn.parallel import DistributedDataParallel as DDP
 
 from nnunetv2.training.nnUNetTrainer.nnUNetTrainer import nnUNetTrainer
 
-from dynamic_network_architectures.architectures.unet import PlainConvUNet, ResidualEncoderUNet
-from dynamic_network_architectures.building_blocks.helper import get_matching_instancenorm, convert_dim_to_conv_op
-from dynamic_network_architectures.initialization.weight_init import init_last_bn_before_add_to_0
-from nnunetv2.utilities.network_initialization import InitWeights_He
-from nnunetv2.utilities.plans_handling.plans_handler import ConfigurationManager, PlansManager
-from nnunetv2.sam.sam_model_2024_synapse_patch1024_tqreshape import SAMAdapter_2024_Synapse_Patch1024_TQReshape
-from nnunetv2.training.data_augmentation.custom_transforms.instances import Instances
 from torch import nn
 import numpy as np
 import torch
@@ -226,7 +190,7 @@ class MaskSAM_AMOS(nnUNetTrainer):
     def __init__(self, plans: dict, configuration: str, fold: int, dataset_json: dict, unpack_dataset: bool = True,
                  device: torch.device = torch.device('cuda')):
         super().__init__(plans, configuration, fold, dataset_json, unpack_dataset, device)
-        self.num_epochs = 1000
+        self.num_epochs = 100
         self.initial_lr = 1e-3
 
     def initialize(self):
@@ -320,7 +284,7 @@ class MaskSAM_AMOS(nnUNetTrainer):
     
     def _get_deep_supervision_scales(self):
         deep_supervision_scales = list(list(i) for i in 1 / np.cumprod(np.vstack(
-            self.configuration_manager.pool_op_kernel_sizes), axis=0))[:-1]
+            self.configuration_manager.pool_op_kernel_sizes), axis=0))[:-2]
         return deep_supervision_scales
 
     def _match_loss(self):
@@ -516,7 +480,7 @@ class MaskSAM_AMOS(nnUNetTrainer):
                                                         ignore_label=self.label_manager.ignore_label)
 
         dataset_tr, dataset_val = self.get_tr_and_val_datasets()
-
+        
         if dim == 2:
             dl_tr = nnUNetDataLoader2D(dataset_tr, self.batch_size,
                                        initial_patch_size,
@@ -558,6 +522,7 @@ class MaskSAM_AMOS(nnUNetTrainer):
                                                       num_cached=max(3, allowed_num_processes // 4), seeds=None,
                                                       pin_memory=self.device.type == 'cuda',
                                                       wait_time=0.002)
+
         # # let's get this party started
         _ = next(mt_gen_train)
         _ = next(mt_gen_val)
@@ -643,7 +608,7 @@ class MaskSAM_AMOS(nnUNetTrainer):
         # So autocast will only be active if we have a cuda device.
         with autocast(self.device.type, enabled=True) if self.device.type == 'cuda' else dummy_context():
 
-            out = self.network(data, second_stage=second_stage)
+            out = self.network(data)
 
             output_classes = out['pred_logits'] 
             mask_predictions = out['pred_masks']
@@ -778,7 +743,7 @@ class MaskSAM_AMOS(nnUNetTrainer):
 
             self.on_train_epoch_start()
             train_outputs = []
-            for batch_id in range(self.num_iterations_per_epoch):
+            for batch_id in tqdm(range(self.num_iterations_per_epoch), desc=f"Epoch {epoch}"):
                 train_outputs.append(self.train_step(next(self.dataloader_train)))
             self.on_train_epoch_end(train_outputs)
 

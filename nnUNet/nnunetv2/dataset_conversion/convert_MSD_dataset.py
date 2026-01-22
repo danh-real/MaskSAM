@@ -61,7 +61,6 @@ def convert_msd_dataset(source_folder: str, overwrite_target_id: Optional[int] =
     existing_datasets = find_candidate_datasets(target_id)
     assert len(existing_datasets) == 0, f"Target dataset id {target_id} is already taken, please consider changing " \
                                         f"it using overwrite_target_id. Conflicting dataset: {existing_datasets} (check nnUNet_results, nnUNet_preprocessed and nnUNet_raw!)"
-
     target_dataset_name = f"Dataset{target_id:03d}_{dataset_name}"
     target_folder = join(nnUNet_raw, target_dataset_name)
     target_imagesTr = join(target_folder, 'imagesTr')
@@ -96,22 +95,70 @@ def convert_msd_dataset(source_folder: str, overwrite_target_id: Optional[int] =
             )
         )
 
-        # copy segmentations
+        # copy segmentations (train labels)
         source_images = [i for i in subfiles(labelsTr, suffix='.nii.gz', join=False) if
                          not i.startswith('.') and not i.startswith('_')]
         for s in source_images:
             shutil.copy(join(labelsTr, s), join(target_labelsTr, s))
 
+        # copy test labels if they exist (optional for MSD)
+        labelsTs = join(source_folder, 'labelsTs')
+        if isdir(labelsTs):
+            target_labelsTs = join(target_folder, 'labelsTs')
+            maybe_mkdir_p(target_labelsTs)
+            source_images = [i for i in subfiles(labelsTs, suffix='.nii.gz', join=False) if
+                             not i.startswith('.') and not i.startswith('_')]
+            for s in source_images:
+                shutil.copy(join(labelsTs, s), join(target_labelsTs, s))
+
         [i.get() for i in results]
 
+    # Load and convert dataset.json
     dataset_json = load_json(dataset_json)
-    dataset_json['labels'] = {j: int(i) for i, j in dataset_json['labels'].items()}
+    
+    # Handle labels - check if already in correct format
+    if 'labels' in dataset_json:
+        labels = dataset_json['labels']
+        first_key = list(labels.keys())[0]
+        
+        # If labels are in format {"background": 0, ...}, convert to {"background": 0, ...}
+        # If labels are in format {"0": "background", ...}, convert to {"background": 0, ...}
+        if first_key.isdigit():
+            # Old MSD format: {"0": "background", "1": "label1"} -> {"background": 0, "label1": 1}
+            dataset_json['labels'] = {j: int(i) for i, j in labels.items()}
+        else:
+            # Already in new format: {"background": 0, "label1": 1} - keep as is
+            pass
     dataset_json['file_ending'] = ".nii.gz"
-    dataset_json["channel_names"] = dataset_json["modality"]
-    del dataset_json["modality"]
-    del dataset_json["training"]
-    del dataset_json["test"]
+    print(dataset_json)
+    # Handle channel_names/modality field
+    if "channel_names" not in dataset_json:
+        if "modality" in dataset_json:
+            # Old MSD format
+            dataset_json["channel_names"] = dataset_json["modality"]
+            del dataset_json["modality"]
+        else:
+            # No modality or channel_names found, create default
+            print("Warning: No 'channel_names' or 'modality' field found in dataset.json. Creating default channel names.")
+            # Infer number of channels from first image
+            first_img = subfiles(target_imagesTr, suffix='.nii.gz', join=False)[0]
+            # Count how many channel files exist for this case
+            case_id = first_img.split('_')[0]
+            num_channels = len([f for f in subfiles(target_imagesTr, join=False) if f.startswith(case_id)])
+            dataset_json["channel_names"] = {str(i): f"channel_{i}" for i in range(num_channels)}
+    
+    # Remove old MSD-specific fields if they exist
+    if "training" in dataset_json:
+        del dataset_json["training"]
+    if "test" in dataset_json:
+        del dataset_json["test"]
+    if "modality" in dataset_json:
+        del dataset_json["modality"]
+    
     save_json(dataset_json, join(nnUNet_raw, target_dataset_name, 'dataset.json'), sort_keys=False)
+    
+    print(f"✓ Successfully converted {os.path.basename(source_folder)} to {target_dataset_name}")
+    print(f"  Location: {target_folder}")
 
 
 def entry_point():

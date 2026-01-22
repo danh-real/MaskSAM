@@ -1,21 +1,8 @@
-import argparse
-import os
-import json
-from datetime import datetime
-import pandas as pd
-import numpy as np
-# import monai
 import torch
 import torch.nn as nn
-import torch.optim as optim
 import torchvision.transforms.functional as TF
-from typing import Any, Iterable
-from tqdm import tqdm
-from sklearn.model_selection import KFold, train_test_split
-from einops import rearrange, repeat
-import scipy
+from einops import rearrange
 from torch.nn import functional as F
-import fvcore.nn.weight_init as weight_init
 
 from .segment_anything import sam_model_registry
 from .segment_anything.utils.transforms import ResizeLongestSide
@@ -27,11 +14,7 @@ import torch
 from torch import nn
 from torch.nn.modules.conv import _ConvNd
 from torch.nn.modules.dropout import _DropoutNd
-from dynamic_network_architectures.architectures.unet import PlainConvUNet, ResidualEncoderUNet
-from dynamic_network_architectures.building_blocks.unet_decoder import UNetDecoder
-from dynamic_network_architectures.building_blocks.helper import maybe_convert_scalar_to_list, get_matching_pool_op
-from torchvision.transforms.functional import resize
-from torchvision.ops import masks_to_boxes
+from dynamic_network_architectures.building_blocks.helper import maybe_convert_scalar_to_list
 from dynamic_network_architectures.building_blocks.simple_conv_blocks import StackedConvBlocks
 import random
 

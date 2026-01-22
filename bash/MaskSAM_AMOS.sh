@@ -1,14 +1,13 @@
-export nnUNet_raw="/data/xiebin/nnunet/DATASETS/nnUNet_raw"
-export nnUNet_preprocessed="/data/xiebin/nnunet/DATASETS/nnUNet_preprocessed"
-export nnUNet_results="/data/xiebin/nnunet/DATASETS/nnUNet_results"
+#!/bin/bash
 
+export nnUNet_raw="/data/code/MaskSAM/DATASETS/nnUnet_raw"
+export nnUNet_preprocessed="/data/code/MaskSAM/DATASETS/nnUnet_preprocessed"
+export nnUNet_results="/data/code/MaskSAM/DATASETS/nnUnet_results"
 
-CUDA_VISIBLE_DEVICES=0,1 nnUNetv2_train 52 3d_fullres 0 -tr MaskSAM_AMOS -p nnUNetPlans_9_512_512_b2 -num_gpus 2 --c
-
-CUDA_VISIBLE_DEVICES=0,1 nnUNetv2_train 52 3d_fullres 1 -tr MaskSAM_AMOS -p nnUNetPlans_9_512_512_b2 -num_gpus 2 --c
-
-CUDA_VISIBLE_DEVICES=0,1 nnUNetv2_train 52 3d_fullres 2 -tr MaskSAM_AMOS -p nnUNetPlans_9_512_512_b2 -num_gpus 2 --c
-
-CUDA_VISIBLE_DEVICES=0,1 nnUNetv2_train 52 3d_fullres 3 -tr MaskSAM_AMOS -p nnUNetPlans_9_512_512_b2 -num_gpus 2 --c
-
-CUDA_VISIBLE_DEVICES=0,1 nnUNetv2_train 52 3d_fullres 4 -tr MaskSAM_AMOS -p nnUNetPlans_9_512_512_b2 -num_gpus 2 --c
+# CUDA_VISIBLE_DEVICES=0 nnUNetv2_train 201 3d_fullres all -tr MaskSAM_AMOS -p nnUNetPlans -num_gpus 1 --c
+# CUDA_VISIBLE_DEVICES=1 nnUNetv2_train 001 3d_fullres all -tr MaskSAM_AMOS -p nnUNetPlans -num_gpus 1 --c
+# CUDA_VISIBLE_DEVICES=0 nnUNetv2_train 002 3d_fullres all -tr MaskSAM_AMOS -p nnUNetPlans -num_gpus 1 --c
+# CUDA_VISIBLE_DEVICES=0 nnUNetv2_train 003 3d_fullres all -tr MaskSAM_AMOS -p nnUNetPlans -num_gpus 1 --c
+# CUDA_VISIBLE_DEVICES=0 nnUNetv2_train 004 3d_fullres all -tr MaskSAM_AMOS -p nnUNetPlans -num_gpus 1 --c
+# CUDA_VISIBLE_DEVICES=0 nnUNetv2_train 010 3d_fullres all -tr MaskSAM_AMOS -p nnUNetPlans -num_gpus 1 --c
+CUDA_VISIBLE_DEVICES=0 nnUNetv2_train 005 3d_fullres all -tr MaskSAM_AMOS -p nnUNetPlans -num_gpus 1 --c

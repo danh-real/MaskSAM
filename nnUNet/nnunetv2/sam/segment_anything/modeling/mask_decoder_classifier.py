@@ -150,7 +150,7 @@ class MaskDecoderClassifier(nn.Module):
         pos_src = torch.repeat_interleave(image_pe, src.shape[0]//image_pe.shape[0], dim=0)
         # print("----", image_pe[:,0,0,0], pos_src[:, 0, 0, 0])
         b, c, h, w = src.shape
-
+        
         # Run the transformer
         hs, src = self.transformer(src, pos_src, tokens)
         iou_token_out = hs[:, 0, :]

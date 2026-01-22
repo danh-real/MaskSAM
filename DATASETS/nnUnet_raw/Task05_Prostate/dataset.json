@@ -1,0 +1,13 @@
+{
+    "channel_names": {
+        "0": "T2",
+        "1": "ADC"
+    },
+    "labels": {
+        "0": "background",
+        "1": "PZ",
+        "2": "TZ"
+    },
+    "numTraining": 25,
+    "file_ending": ".nii.gz"
+}

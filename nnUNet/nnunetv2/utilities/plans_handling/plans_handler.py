@@ -224,7 +224,7 @@ class PlansManager(object):
         (PlansHandler.plans['key'])
         """
         self.plans = plans_file_or_dict if isinstance(plans_file_or_dict, dict) else load_json(plans_file_or_dict)
-
+        
     def __repr__(self):
         return self.plans.__repr__()
 

@@ -217,7 +217,7 @@ class PositionEmbeddingRandom(nn.Module):
         else:
             y_embed = y_embed / h
             x_embed = x_embed / w
-
+            
         pe = self._pe_encoding(torch.stack([x_embed, y_embed], dim=-1))
         return pe.permute(2, 0, 1)  # C x H x W
 

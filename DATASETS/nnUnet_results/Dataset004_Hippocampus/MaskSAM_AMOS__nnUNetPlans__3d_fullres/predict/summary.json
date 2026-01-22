@@ -1,0 +1,1388 @@
+{
+    "foreground_mean": {
+        "Dice": 0.8617636977548511,
+        "FN": 194.52884615384613,
+        "FP": 243.43269230769232,
+        "IoU": 0.7600621647150518,
+        "TN": 60846.480769230766,
+        "TP": 1403.7115384615386,
+        "n_pred": 1647.1442307692307,
+        "n_ref": 1598.2403846153848
+    },
+    "mean": {
+        "1": {
+            "Dice": 0.8658718537609916,
+            "FN": 208.98076923076923,
+            "FP": 230.1153846153846,
+            "IoU": 0.7674026888757494,
+            "TN": 60777.980769230766,
+            "TP": 1471.076923076923,
+            "n_pred": 1701.1923076923076,
+            "n_ref": 1680.0576923076924
+        },
+        "2": {
+            "Dice": 0.8576555417487104,
+            "FN": 180.07692307692307,
+            "FP": 256.75,
+            "IoU": 0.7527216405543542,
+            "TN": 60914.980769230766,
+            "TP": 1336.3461538461538,
+            "n_pred": 1593.0961538461538,
+            "n_ref": 1516.423076923077
+        }
+    },
+    "metric_per_case": [
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8594693984764906,
+                    "FN": 201,
+                    "FP": 334,
+                    "IoU": 0.7535697835099032,
+                    "TN": 63874,
+                    "TP": 1636,
+                    "n_pred": 1970,
+                    "n_ref": 1837
+                },
+                "2": {
+                    "Dice": 0.8472673559822748,
+                    "FN": 287,
+                    "FP": 230,
+                    "IoU": 0.735007688364941,
+                    "TN": 64094,
+                    "TP": 1434,
+                    "n_pred": 1664,
+                    "n_ref": 1721
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_038.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_038.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9150261649638675,
+                    "FN": 121,
+                    "FP": 220,
+                    "IoU": 0.8433624253559945,
+                    "TN": 55127,
+                    "TP": 1836,
+                    "n_pred": 2056,
+                    "n_ref": 1957
+                },
+                "2": {
+                    "Dice": 0.8478513356562137,
+                    "FN": 220,
+                    "FP": 173,
+                    "IoU": 0.7358870967741935,
+                    "TN": 55816,
+                    "TP": 1095,
+                    "n_pred": 1268,
+                    "n_ref": 1315
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_048.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_048.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9006510048117747,
+                    "FN": 135,
+                    "FP": 216,
+                    "IoU": 0.8192584963954685,
+                    "TN": 60926,
+                    "TP": 1591,
+                    "n_pred": 1807,
+                    "n_ref": 1726
+                },
+                "2": {
+                    "Dice": 0.8862350722815839,
+                    "FN": 273,
+                    "FP": 89,
+                    "IoU": 0.7957110609480813,
+                    "TN": 61096,
+                    "TP": 1410,
+                    "n_pred": 1499,
+                    "n_ref": 1683
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_060.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_060.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7724441187248077,
+                    "FN": 384,
+                    "FP": 237,
+                    "IoU": 0.6292537313432836,
+                    "TN": 71363,
+                    "TP": 1054,
+                    "n_pred": 1291,
+                    "n_ref": 1438
+                },
+                "2": {
+                    "Dice": 0.816771970132108,
+                    "FN": 140,
+                    "FP": 498,
+                    "IoU": 0.6902912621359223,
+                    "TN": 70978,
+                    "TP": 1422,
+                    "n_pred": 1920,
+                    "n_ref": 1562
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_074.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_074.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9045881126173096,
+                    "FN": 249,
+                    "FP": 117,
+                    "IoU": 0.8257972394098049,
+                    "TN": 71924,
+                    "TP": 1735,
+                    "n_pred": 1852,
+                    "n_ref": 1984
+                },
+                "2": {
+                    "Dice": 0.8856812933025404,
+                    "FN": 200,
+                    "FP": 196,
+                    "IoU": 0.794818652849741,
+                    "TN": 72095,
+                    "TP": 1534,
+                    "n_pred": 1730,
+                    "n_ref": 1734
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_077.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_077.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.888088808880888,
+                    "FN": 170,
+                    "FP": 203,
+                    "IoU": 0.7987048030221263,
+                    "TN": 61639,
+                    "TP": 1480,
+                    "n_pred": 1683,
+                    "n_ref": 1650
+                },
+                "2": {
+                    "Dice": 0.8943683409436834,
+                    "FN": 252,
+                    "FP": 95,
+                    "IoU": 0.808920704845815,
+                    "TN": 61676,
+                    "TP": 1469,
+                    "n_pred": 1564,
+                    "n_ref": 1721
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_083.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_083.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.85137861466039,
+                    "FN": 124,
+                    "FP": 318,
+                    "IoU": 0.7412177985948478,
+                    "TN": 63708,
+                    "TP": 1266,
+                    "n_pred": 1584,
+                    "n_ref": 1390
+                },
+                "2": {
+                    "Dice": 0.8676514923123304,
+                    "FN": 321,
+                    "FP": 118,
+                    "IoU": 0.7662406815761449,
+                    "TN": 63538,
+                    "TP": 1439,
+                    "n_pred": 1557,
+                    "n_ref": 1760
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_084.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_084.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8938807126258714,
+                    "FN": 235,
+                    "FP": 39,
+                    "IoU": 0.8081232492997199,
+                    "TN": 51816,
+                    "TP": 1154,
+                    "n_pred": 1193,
+                    "n_ref": 1389
+                },
+                "2": {
+                    "Dice": 0.8829908675799086,
+                    "FN": 125,
+                    "FP": 285,
+                    "IoU": 0.7904956566172713,
+                    "TN": 51287,
+                    "TP": 1547,
+                    "n_pred": 1832,
+                    "n_ref": 1672
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_091.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_091.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9109697933227345,
+                    "FN": 171,
+                    "FP": 165,
+                    "IoU": 0.8364963503649635,
+                    "TN": 60267,
+                    "TP": 1719,
+                    "n_pred": 1884,
+                    "n_ref": 1890
+                },
+                "2": {
+                    "Dice": 0.9072164948453608,
+                    "FN": 130,
+                    "FP": 140,
+                    "IoU": 0.8301886792452831,
+                    "TN": 60732,
+                    "TP": 1320,
+                    "n_pred": 1460,
+                    "n_ref": 1450
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_096.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_096.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8583992963940194,
+                    "FN": 368,
+                    "FP": 115,
+                    "IoU": 0.7519260400616333,
+                    "TN": 55440,
+                    "TP": 1464,
+                    "n_pred": 1579,
+                    "n_ref": 1832
+                },
+                "2": {
+                    "Dice": 0.8603196664350243,
+                    "FN": 90,
+                    "FP": 312,
+                    "IoU": 0.7548780487804878,
+                    "TN": 55747,
+                    "TP": 1238,
+                    "n_pred": 1550,
+                    "n_ref": 1328
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_105.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_105.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8651551312649165,
+                    "FN": 207,
+                    "FP": 245,
+                    "IoU": 0.7623554153522608,
+                    "TN": 68532,
+                    "TP": 1450,
+                    "n_pred": 1695,
+                    "n_ref": 1657
+                },
+                "2": {
+                    "Dice": 0.8192258613356018,
+                    "FN": 106,
+                    "FP": 319,
+                    "IoU": 0.6938040345821326,
+                    "TN": 69046,
+                    "TP": 963,
+                    "n_pred": 1282,
+                    "n_ref": 1069
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_125.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_125.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9062590135563888,
+                    "FN": 79,
+                    "FP": 246,
+                    "IoU": 0.8285864978902954,
+                    "TN": 71892,
+                    "TP": 1571,
+                    "n_pred": 1817,
+                    "n_ref": 1650
+                },
+                "2": {
+                    "Dice": 0.8769338959212377,
+                    "FN": 248,
+                    "FP": 102,
+                    "IoU": 0.7808390732623669,
+                    "TN": 72191,
+                    "TP": 1247,
+                    "n_pred": 1349,
+                    "n_ref": 1495
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_126.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_126.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9072213133909792,
+                    "FN": 153,
+                    "FP": 244,
+                    "IoU": 0.830196749358426,
+                    "TN": 62452,
+                    "TP": 1941,
+                    "n_pred": 2185,
+                    "n_ref": 2094
+                },
+                "2": {
+                    "Dice": 0.8867706528018486,
+                    "FN": 120,
+                    "FP": 272,
+                    "IoU": 0.796574987026466,
+                    "TN": 62863,
+                    "TP": 1535,
+                    "n_pred": 1807,
+                    "n_ref": 1655
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_127.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_127.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8990958408679928,
+                    "FN": 120,
+                    "FP": 159,
+                    "IoU": 0.816688567674113,
+                    "TN": 58062,
+                    "TP": 1243,
+                    "n_pred": 1402,
+                    "n_ref": 1363
+                },
+                "2": {
+                    "Dice": 0.881077038145101,
+                    "FN": 88,
+                    "FP": 230,
+                    "IoU": 0.7874331550802139,
+                    "TN": 58088,
+                    "TP": 1178,
+                    "n_pred": 1408,
+                    "n_ref": 1266
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_135.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_135.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8986193293885602,
+                    "FN": 32,
+                    "FP": 225,
+                    "IoU": 0.8159025787965616,
+                    "TN": 60428,
+                    "TP": 1139,
+                    "n_pred": 1364,
+                    "n_ref": 1171
+                },
+                "2": {
+                    "Dice": 0.8906764168190128,
+                    "FN": 145,
+                    "FP": 154,
+                    "IoU": 0.8029004614370469,
+                    "TN": 60307,
+                    "TP": 1218,
+                    "n_pred": 1372,
+                    "n_ref": 1363
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_138.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_138.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9188580015026296,
+                    "FN": 99,
+                    "FP": 117,
+                    "IoU": 0.8498957609451008,
+                    "TN": 65555,
+                    "TP": 1223,
+                    "n_pred": 1340,
+                    "n_ref": 1322
+                },
+                "2": {
+                    "Dice": 0.9142656359803233,
+                    "FN": 74,
+                    "FP": 170,
+                    "IoU": 0.8420711974110032,
+                    "TN": 65449,
+                    "TP": 1301,
+                    "n_pred": 1471,
+                    "n_ref": 1375
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_142.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_142.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9001901140684411,
+                    "FN": 180,
+                    "FP": 240,
+                    "IoU": 0.8184961106309421,
+                    "TN": 60650,
+                    "TP": 1894,
+                    "n_pred": 2134,
+                    "n_ref": 2074
+                },
+                "2": {
+                    "Dice": 0.8612257859637981,
+                    "FN": 106,
+                    "FP": 331,
+                    "IoU": 0.7562744004461796,
+                    "TN": 61171,
+                    "TP": 1356,
+                    "n_pred": 1687,
+                    "n_ref": 1462
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_145.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_145.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.896635197288792,
+                    "FN": 269,
+                    "FP": 158,
+                    "IoU": 0.812637121544537,
+                    "TN": 68317,
+                    "TP": 1852,
+                    "n_pred": 2010,
+                    "n_ref": 2121
+                },
+                "2": {
+                    "Dice": 0.8863577530416774,
+                    "FN": 161,
+                    "FP": 278,
+                    "IoU": 0.795908879590888,
+                    "TN": 68445,
+                    "TP": 1712,
+                    "n_pred": 1990,
+                    "n_ref": 1873
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_152.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_152.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8828915662650603,
+                    "FN": 270,
+                    "FP": 216,
+                    "IoU": 0.7903364969801553,
+                    "TN": 65074,
+                    "TP": 1832,
+                    "n_pred": 2048,
+                    "n_ref": 2102
+                },
+                "2": {
+                    "Dice": 0.8626728110599078,
+                    "FN": 94,
+                    "FP": 353,
+                    "IoU": 0.7585089141004863,
+                    "TN": 65541,
+                    "TP": 1404,
+                    "n_pred": 1757,
+                    "n_ref": 1498
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_156.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_156.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8966986155484558,
+                    "FN": 88,
+                    "FP": 203,
+                    "IoU": 0.8127413127413128,
+                    "TN": 46296,
+                    "TP": 1263,
+                    "n_pred": 1466,
+                    "n_ref": 1351
+                },
+                "2": {
+                    "Dice": 0.8674611773203322,
+                    "FN": 156,
+                    "FP": 211,
+                    "IoU": 0.7659438775510204,
+                    "TN": 46282,
+                    "TP": 1201,
+                    "n_pred": 1412,
+                    "n_ref": 1357
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_193.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_193.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8873038516405135,
+                    "FN": 229,
+                    "FP": 166,
+                    "IoU": 0.7974358974358975,
+                    "TN": 58128,
+                    "TP": 1555,
+                    "n_pred": 1721,
+                    "n_ref": 1784
+                },
+                "2": {
+                    "Dice": 0.9077201447527141,
+                    "FN": 88,
+                    "FP": 218,
+                    "IoU": 0.8310325786858089,
+                    "TN": 58267,
+                    "TP": 1505,
+                    "n_pred": 1723,
+                    "n_ref": 1593
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_197.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_197.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.912848158131177,
+                    "FN": 118,
+                    "FP": 173,
+                    "IoU": 0.8396694214876033,
+                    "TN": 65577,
+                    "TP": 1524,
+                    "n_pred": 1697,
+                    "n_ref": 1642
+                },
+                "2": {
+                    "Dice": 0.8934010152284264,
+                    "FN": 87,
+                    "FP": 186,
+                    "IoU": 0.8073394495412844,
+                    "TN": 65975,
+                    "TP": 1144,
+                    "n_pred": 1330,
+                    "n_ref": 1231
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_204.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_204.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9042448173741362,
+                    "FN": 155,
+                    "FP": 233,
+                    "IoU": 0.8252252252252252,
+                    "TN": 58995,
+                    "TP": 1832,
+                    "n_pred": 2065,
+                    "n_ref": 1987
+                },
+                "2": {
+                    "Dice": 0.8772182254196643,
+                    "FN": 258,
+                    "FP": 254,
+                    "IoU": 0.7812900469884665,
+                    "TN": 58874,
+                    "TP": 1829,
+                    "n_pred": 2083,
+                    "n_ref": 2087
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_207.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_207.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8723181580324437,
+                    "FN": 353,
+                    "FP": 135,
+                    "IoU": 0.7735498839907192,
+                    "TN": 52223,
+                    "TP": 1667,
+                    "n_pred": 1802,
+                    "n_ref": 2020
+                },
+                "2": {
+                    "Dice": 0.84009942004971,
+                    "FN": 68,
+                    "FP": 318,
+                    "IoU": 0.7242857142857143,
+                    "TN": 52978,
+                    "TP": 1014,
+                    "n_pred": 1332,
+                    "n_ref": 1082
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_217.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_217.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.6174282678002125,
+                    "FN": 612,
+                    "FP": 108,
+                    "IoU": 0.4465795541890853,
+                    "TN": 50923,
+                    "TP": 581,
+                    "n_pred": 689,
+                    "n_ref": 1193
+                },
+                "2": {
+                    "Dice": 0.6910112359550562,
+                    "FN": 517,
+                    "FP": 143,
+                    "IoU": 0.5278969957081545,
+                    "TN": 50826,
+                    "TP": 738,
+                    "n_pred": 881,
+                    "n_ref": 1255
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_221.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_221.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8449197860962567,
+                    "FN": 250,
+                    "FP": 243,
+                    "IoU": 0.7314814814814815,
+                    "TN": 60435,
+                    "TP": 1343,
+                    "n_pred": 1586,
+                    "n_ref": 1593
+                },
+                "2": {
+                    "Dice": 0.8434654919236417,
+                    "FN": 138,
+                    "FP": 395,
+                    "IoU": 0.7293042153377349,
+                    "TN": 60302,
+                    "TP": 1436,
+                    "n_pred": 1831,
+                    "n_ref": 1574
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_233.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_233.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8830049261083743,
+                    "FN": 161,
+                    "FP": 219,
+                    "IoU": 0.7905181918412348,
+                    "TN": 72001,
+                    "TP": 1434,
+                    "n_pred": 1653,
+                    "n_ref": 1595
+                },
+                "2": {
+                    "Dice": 0.8023701638201464,
+                    "FN": 343,
+                    "FP": 224,
+                    "IoU": 0.669965075669383,
+                    "TN": 72097,
+                    "TP": 1151,
+                    "n_pred": 1375,
+                    "n_ref": 1494
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_236.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_236.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7590431738623103,
+                    "FN": 329,
+                    "FP": 497,
+                    "IoU": 0.611659614480489,
+                    "TN": 68433,
+                    "TP": 1301,
+                    "n_pred": 1798,
+                    "n_ref": 1630
+                },
+                "2": {
+                    "Dice": 0.7838933951332561,
+                    "FN": 342,
+                    "FP": 404,
+                    "IoU": 0.6445926631729395,
+                    "TN": 68461,
+                    "TP": 1353,
+                    "n_pred": 1757,
+                    "n_ref": 1695
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_245.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_245.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9128798842257597,
+                    "FN": 207,
+                    "FP": 94,
+                    "IoU": 0.8397231096911608,
+                    "TN": 54698,
+                    "TP": 1577,
+                    "n_pred": 1671,
+                    "n_ref": 1784
+                },
+                "2": {
+                    "Dice": 0.8848673946957878,
+                    "FN": 147,
+                    "FP": 222,
+                    "IoU": 0.7935086737548964,
+                    "TN": 54789,
+                    "TP": 1418,
+                    "n_pred": 1640,
+                    "n_ref": 1565
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_249.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_249.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8161737177087234,
+                    "FN": 98,
+                    "FP": 393,
+                    "IoU": 0.6894370651486401,
+                    "TN": 55641,
+                    "TP": 1090,
+                    "n_pred": 1483,
+                    "n_ref": 1188
+                },
+                "2": {
+                    "Dice": 0.8196524865188736,
+                    "FN": 307,
+                    "FP": 295,
+                    "IoU": 0.6944162436548224,
+                    "TN": 55252,
+                    "TP": 1368,
+                    "n_pred": 1663,
+                    "n_ref": 1675
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_257.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_257.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8627873563218391,
+                    "FN": 81,
+                    "FP": 301,
+                    "IoU": 0.7586860391661402,
+                    "TN": 60157,
+                    "TP": 1201,
+                    "n_pred": 1502,
+                    "n_ref": 1282
+                },
+                "2": {
+                    "Dice": 0.8360605125038593,
+                    "FN": 102,
+                    "FP": 429,
+                    "IoU": 0.7183023872679045,
+                    "TN": 59855,
+                    "TP": 1354,
+                    "n_pred": 1783,
+                    "n_ref": 1456
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_289.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_289.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8906289467037131,
+                    "FN": 148,
+                    "FP": 285,
+                    "IoU": 0.8028233151183971,
+                    "TN": 63012,
+                    "TP": 1763,
+                    "n_pred": 2048,
+                    "n_ref": 1911
+                },
+                "2": {
+                    "Dice": 0.8897485493230174,
+                    "FN": 188,
+                    "FP": 154,
+                    "IoU": 0.8013937282229965,
+                    "TN": 63486,
+                    "TP": 1380,
+                    "n_pred": 1534,
+                    "n_ref": 1568
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_292.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_292.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8671288272674754,
+                    "FN": 245,
+                    "FP": 215,
+                    "IoU": 0.7654258031616522,
+                    "TN": 65799,
+                    "TP": 1501,
+                    "n_pred": 1716,
+                    "n_ref": 1746
+                },
+                "2": {
+                    "Dice": 0.8487084870848709,
+                    "FN": 237,
+                    "FP": 214,
+                    "IoU": 0.7371794871794872,
+                    "TN": 66044,
+                    "TP": 1265,
+                    "n_pred": 1479,
+                    "n_ref": 1502
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_294.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_294.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8410906086477554,
+                    "FN": 271,
+                    "FP": 306,
+                    "IoU": 0.7257604562737643,
+                    "TN": 58946,
+                    "TP": 1527,
+                    "n_pred": 1833,
+                    "n_ref": 1798
+                },
+                "2": {
+                    "Dice": 0.8362494392104083,
+                    "FN": 127,
+                    "FP": 238,
+                    "IoU": 0.7185813415574402,
+                    "TN": 59753,
+                    "TP": 932,
+                    "n_pred": 1170,
+                    "n_ref": 1059
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_298.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_298.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8939812258420762,
+                    "FN": 139,
+                    "FP": 245,
+                    "IoU": 0.8082875686470294,
+                    "TN": 61837,
+                    "TP": 1619,
+                    "n_pred": 1864,
+                    "n_ref": 1758
+                },
+                "2": {
+                    "Dice": 0.8630393996247655,
+                    "FN": 156,
+                    "FP": 282,
+                    "IoU": 0.759075907590759,
+                    "TN": 62022,
+                    "TP": 1380,
+                    "n_pred": 1662,
+                    "n_ref": 1536
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_303.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_303.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8768982229402261,
+                    "FN": 208,
+                    "FP": 173,
+                    "IoU": 0.7807825086306099,
+                    "TN": 65343,
+                    "TP": 1357,
+                    "n_pred": 1530,
+                    "n_ref": 1565
+                },
+                "2": {
+                    "Dice": 0.8992384299941417,
+                    "FN": 101,
+                    "FP": 243,
+                    "IoU": 0.8169238956891964,
+                    "TN": 65202,
+                    "TP": 1535,
+                    "n_pred": 1778,
+                    "n_ref": 1636
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_311.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_311.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8639396576733391,
+                    "FN": 91,
+                    "FP": 378,
+                    "IoU": 0.7604698672114403,
+                    "TN": 60313,
+                    "TP": 1489,
+                    "n_pred": 1867,
+                    "n_ref": 1580
+                },
+                "2": {
+                    "Dice": 0.8419790104947527,
+                    "FN": 111,
+                    "FP": 416,
+                    "IoU": 0.7270844122216468,
+                    "TN": 60340,
+                    "TP": 1404,
+                    "n_pred": 1820,
+                    "n_ref": 1515
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_316.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_316.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8799708135716892,
+                    "FN": 174,
+                    "FP": 155,
+                    "IoU": 0.7856677524429967,
+                    "TN": 52321,
+                    "TP": 1206,
+                    "n_pred": 1361,
+                    "n_ref": 1380
+                },
+                "2": {
+                    "Dice": 0.8300127172530734,
+                    "FN": 63,
+                    "FP": 338,
+                    "IoU": 0.7094202898550724,
+                    "TN": 52476,
+                    "TP": 979,
+                    "n_pred": 1317,
+                    "n_ref": 1042
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_319.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_319.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.844950213371266,
+                    "FN": 353,
+                    "FP": 301,
+                    "IoU": 0.7315270935960592,
+                    "TN": 69888,
+                    "TP": 1782,
+                    "n_pred": 2083,
+                    "n_ref": 2135
+                },
+                "2": {
+                    "Dice": 0.8661246612466125,
+                    "FN": 250,
+                    "FP": 244,
+                    "IoU": 0.7638623326959847,
+                    "TN": 70232,
+                    "TP": 1598,
+                    "n_pred": 1842,
+                    "n_ref": 1848
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_326.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_326.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7896604156107451,
+                    "FN": 379,
+                    "FP": 451,
+                    "IoU": 0.652428810720268,
+                    "TN": 55276,
+                    "TP": 1558,
+                    "n_pred": 2009,
+                    "n_ref": 1937
+                },
+                "2": {
+                    "Dice": 0.8205434458047178,
+                    "FN": 364,
+                    "FP": 237,
+                    "IoU": 0.6956962025316455,
+                    "TN": 55689,
+                    "TP": 1374,
+                    "n_pred": 1611,
+                    "n_ref": 1738
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_329.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_329.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7485515643105446,
+                    "FN": 294,
+                    "FP": 357,
+                    "IoU": 0.5981481481481481,
+                    "TN": 60044,
+                    "TP": 969,
+                    "n_pred": 1326,
+                    "n_ref": 1263
+                },
+                "2": {
+                    "Dice": 0.7892086330935252,
+                    "FN": 172,
+                    "FP": 414,
+                    "IoU": 0.6518122400475341,
+                    "TN": 59981,
+                    "TP": 1097,
+                    "n_pred": 1511,
+                    "n_ref": 1269
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_335.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_335.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.7110280373831775,
+                    "FN": 347,
+                    "FP": 426,
+                    "IoU": 0.5516241299303944,
+                    "TN": 66990,
+                    "TP": 951,
+                    "n_pred": 1377,
+                    "n_ref": 1298
+                },
+                "2": {
+                    "Dice": 0.805635838150289,
+                    "FN": 180,
+                    "FP": 358,
+                    "IoU": 0.6745311554748942,
+                    "TN": 67061,
+                    "TP": 1115,
+                    "n_pred": 1473,
+                    "n_ref": 1295
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_336.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_336.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8972667295004713,
+                    "FN": 164,
+                    "FP": 163,
+                    "IoU": 0.8136752136752137,
+                    "TN": 59425,
+                    "TP": 1428,
+                    "n_pred": 1591,
+                    "n_ref": 1592
+                },
+                "2": {
+                    "Dice": 0.8526984126984127,
+                    "FN": 275,
+                    "FP": 189,
+                    "IoU": 0.7432208079690094,
+                    "TN": 59373,
+                    "TP": 1343,
+                    "n_pred": 1532,
+                    "n_ref": 1618
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_340.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_340.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8769397329483941,
+                    "FN": 116,
+                    "FP": 225,
+                    "IoU": 0.7808483290488432,
+                    "TN": 55564,
+                    "TP": 1215,
+                    "n_pred": 1440,
+                    "n_ref": 1331
+                },
+                "2": {
+                    "Dice": 0.8578643578643579,
+                    "FN": 68,
+                    "FP": 326,
+                    "IoU": 0.7511054958938724,
+                    "TN": 55537,
+                    "TP": 1189,
+                    "n_pred": 1515,
+                    "n_ref": 1257
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_341.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_341.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8531841193711698,
+                    "FN": 221,
+                    "FP": 330,
+                    "IoU": 0.7439591078066915,
+                    "TN": 60323,
+                    "TP": 1601,
+                    "n_pred": 1931,
+                    "n_ref": 1822
+                },
+                "2": {
+                    "Dice": 0.8511401486036382,
+                    "FN": 241,
+                    "FP": 340,
+                    "IoU": 0.7408563782337199,
+                    "TN": 60233,
+                    "TP": 1661,
+                    "n_pred": 2001,
+                    "n_ref": 1902
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_351.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_351.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8776699029126214,
+                    "FN": 173,
+                    "FP": 205,
+                    "IoU": 0.7820069204152249,
+                    "TN": 55866,
+                    "TP": 1356,
+                    "n_pred": 1561,
+                    "n_ref": 1529
+                },
+                "2": {
+                    "Dice": 0.8418367346938775,
+                    "FN": 228,
+                    "FP": 206,
+                    "IoU": 0.7268722466960352,
+                    "TN": 56011,
+                    "TP": 1155,
+                    "n_pred": 1361,
+                    "n_ref": 1383
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_354.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_354.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8564705882352941,
+                    "FN": 200,
+                    "FP": 349,
+                    "IoU": 0.7489711934156379,
+                    "TN": 66973,
+                    "TP": 1638,
+                    "n_pred": 1987,
+                    "n_ref": 1838
+                },
+                "2": {
+                    "Dice": 0.8619702176403208,
+                    "FN": 163,
+                    "FP": 319,
+                    "IoU": 0.7574232511323603,
+                    "TN": 67173,
+                    "TP": 1505,
+                    "n_pred": 1824,
+                    "n_ref": 1668
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_363.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_363.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.9156879194630873,
+                    "FN": 299,
+                    "FP": 103,
+                    "IoU": 0.8444874274661509,
+                    "TN": 56541,
+                    "TP": 2183,
+                    "n_pred": 2286,
+                    "n_ref": 2482
+                },
+                "2": {
+                    "Dice": 0.8753298153034301,
+                    "FN": 170,
+                    "FP": 208,
+                    "IoU": 0.7782991202346041,
+                    "TN": 57421,
+                    "TP": 1327,
+                    "n_pred": 1535,
+                    "n_ref": 1497
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_366.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_366.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.897665033150764,
+                    "FN": 129,
+                    "FP": 226,
+                    "IoU": 0.8143305439330544,
+                    "TN": 56840,
+                    "TP": 1557,
+                    "n_pred": 1783,
+                    "n_ref": 1686
+                },
+                "2": {
+                    "Dice": 0.8726371242640223,
+                    "FN": 128,
+                    "FP": 283,
+                    "IoU": 0.7740516767454645,
+                    "TN": 56933,
+                    "TP": 1408,
+                    "n_pred": 1691,
+                    "n_ref": 1536
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_375.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_375.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.908716136631331,
+                    "FN": 187,
+                    "FP": 123,
+                    "IoU": 0.8327037236913114,
+                    "TN": 65767,
+                    "TP": 1543,
+                    "n_pred": 1666,
+                    "n_ref": 1730
+                },
+                "2": {
+                    "Dice": 0.9144338807260155,
+                    "FN": 118,
+                    "FP": 179,
+                    "IoU": 0.8423566878980892,
+                    "TN": 65736,
+                    "TP": 1587,
+                    "n_pred": 1766,
+                    "n_ref": 1705
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_380.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_380.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.8788312804354054,
+                    "FN": 243,
+                    "FP": 180,
+                    "IoU": 0.7838528359734287,
+                    "TN": 50678,
+                    "TP": 1534,
+                    "n_pred": 1714,
+                    "n_ref": 1777
+                },
+                "2": {
+                    "Dice": 0.8934749620637329,
+                    "FN": 171,
+                    "FP": 180,
+                    "IoU": 0.8074602303894679,
+                    "TN": 50812,
+                    "TP": 1472,
+                    "n_pred": 1652,
+                    "n_ref": 1643
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_383.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_383.nii.gz"
+        },
+        {
+            "metrics": {
+                "1": {
+                    "Dice": 0.855604173678896,
+                    "FN": 238,
+                    "FP": 191,
+                    "IoU": 0.7476470588235294,
+                    "TN": 52156,
+                    "TP": 1271,
+                    "n_pred": 1462,
+                    "n_ref": 1509
+                },
+                "2": {
+                    "Dice": 0.8634335019339482,
+                    "FN": 120,
+                    "FP": 339,
+                    "IoU": 0.7596858638743456,
+                    "TN": 51946,
+                    "TP": 1451,
+                    "n_pred": 1790,
+                    "n_ref": 1571
+                }
+            },
+            "prediction_file": "/data/code/MaskSAM/DATASETS/nnUnet_results/Dataset004_Hippocampus/MaskSAM_AMOS__nnUNetPlans__3d_fullres/predict/hippocampus_387.nii.gz",
+            "reference_file": "/data/code/MaskSAM/DATASETS/nnUnet_raw/Dataset004_Hippocampus/labelsTs/hippocampus_387.nii.gz"
+        }
+    ]
+}

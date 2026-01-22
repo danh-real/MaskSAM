@@ -467,27 +467,27 @@ class nnUNetTrainer(object):
 
     def print_to_log_file(self, *args, also_print_to_console=True, add_timestamp=True):
         if self.local_rank == 0:
-            timestamp = time()
-            dt_object = datetime.fromtimestamp(timestamp)
+            # timestamp = time()
+            # dt_object = datetime.fromtimestamp(timestamp)
 
-            if add_timestamp:
-                args = (f"{dt_object}:", *args)
+            # if add_timestamp:
+            #     args = (f"{dt_object}:", *args)
 
-            successful = False
-            max_attempts = 5
-            ctr = 0
-            while not successful and ctr < max_attempts:
-                try:
-                    with open(self.log_file, 'a+') as f:
-                        for a in args:
-                            f.write(str(a))
-                            f.write(" ")
-                        f.write("\n")
-                    successful = True
-                except IOError:
-                    print(f"{datetime.fromtimestamp(timestamp)}: failed to log: ", sys.exc_info())
-                    sleep(0.5)
-                    ctr += 1
+            # successful = False
+            # max_attempts = 5
+            # ctr = 0
+            # while not successful and ctr < max_attempts:
+            #     try:
+            #         with open(self.log_file, 'a+') as f:
+            #             for a in args:
+            #                 f.write(str(a))
+            #                 f.write(" ")
+            #             f.write("\n")
+            #         successful = True
+            #     except IOError:
+            #         print(f"{datetime.fromtimestamp(timestamp)}: failed to log: ", sys.exc_info())
+            #         sleep(0.5)
+            #         ctr += 1
             if also_print_to_console:
                 print(*args)
         elif also_print_to_console:
@@ -606,7 +606,7 @@ class nnUNetTrainer(object):
     def get_tr_and_val_datasets(self):
         # create dataset split
         tr_keys, val_keys = self.do_split()
-
+        
         # load the datasets for training and validation. Note that we always draw random samples so we really don't
         # care about distributing training cases across GPUs.
         dataset_tr = nnUNetDataset(self.preprocessed_dataset_folder, tr_keys,
@@ -615,6 +615,7 @@ class nnUNetTrainer(object):
         dataset_val = nnUNetDataset(self.preprocessed_dataset_folder, val_keys,
                                     folder_with_segs_from_previous_stage=self.folder_with_segs_from_previous_stage,
                                     num_images_properties_loading_threshold=0)
+        
         return dataset_tr, dataset_val
 
     def get_dataloaders(self):
@@ -718,6 +719,7 @@ class nnUNetTrainer(object):
         else:
             patch_size_spatial = patch_size
             ignore_axes = None
+            
         transforms.append(
             SpatialTransform(
                 patch_size_spatial, patch_center_dist_from_border=0, random_crop=False, p_elastic_deform=0,
@@ -844,6 +846,7 @@ class nnUNetTrainer(object):
             )
 
         if deep_supervision_scales is not None:
+            print(deep_supervision_scales)
             transforms.append(DownsampleSegForDSTransform(ds_scales=deep_supervision_scales))
 
         return ComposeTransforms(transforms)
@@ -906,7 +909,7 @@ class nnUNetTrainer(object):
             self.initialize()
 
         maybe_mkdir_p(self.output_folder)
-
+        
         # make sure deep supervision is on in the network
         self.set_deep_supervision_enabled(self.enable_deep_supervision)
 

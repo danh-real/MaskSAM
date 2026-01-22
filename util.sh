@@ -1,0 +1,5 @@
+mv DATASETS/nnUnet_raw/Dataset005_Prostate DATASETS/nnUnet_raw/Task05_Prostate
+mv DATASETS/nnUnet_raw/Dataset006_Lung DATASETS/nnUnet_raw/Task06_Lung
+mv DATASETS/nnUnet_raw/Dataset007_Pancreas DATASETS/nnUnet_raw/Task07_Pancreas
+mv DATASETS/nnUnet_raw/Dataset008_HepaticVessel DATASETS/nnUnet_raw/Task08_HepaticVessel
+mv DATASETS/nnUnet_raw/Dataset009_Spleen DATASETS/nnUnet_raw/Task09_Spleen

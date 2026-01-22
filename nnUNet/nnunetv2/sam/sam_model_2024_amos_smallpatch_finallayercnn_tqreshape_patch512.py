@@ -1,21 +1,9 @@
-import argparse
-import os
-import json
-from datetime import datetime
-import pandas as pd
-import numpy as np
 # import monai
 import torch
 import torch.nn as nn
-import torch.optim as optim
 import torchvision.transforms.functional as TF
-from typing import Any, Iterable
-from tqdm import tqdm
-from sklearn.model_selection import KFold, train_test_split
-from einops import rearrange, repeat
-import scipy
+from einops import rearrange
 from torch.nn import functional as F
-import fvcore.nn.weight_init as weight_init
 
 from .segment_anything import sam_model_registry
 from .segment_anything.utils.transforms import ResizeLongestSide
@@ -27,13 +15,8 @@ import torch
 from torch import nn
 from torch.nn.modules.conv import _ConvNd
 from torch.nn.modules.dropout import _DropoutNd
-from dynamic_network_architectures.architectures.unet import PlainConvUNet, ResidualEncoderUNet
-from dynamic_network_architectures.building_blocks.unet_decoder import UNetDecoder
-from dynamic_network_architectures.building_blocks.helper import maybe_convert_scalar_to_list, get_matching_pool_op
-from torchvision.transforms.functional import resize
-from torchvision.ops import masks_to_boxes
+from dynamic_network_architectures.building_blocks.helper import maybe_convert_scalar_to_list
 from dynamic_network_architectures.building_blocks.simple_conv_blocks import StackedConvBlocks
-import random
 
 class TestDecoder(nn.Module):
 
@@ -113,7 +96,7 @@ class SAMAdapter_2024_AMOS_SmallPatch_FinalLayerCNN_TQReshape_Patch512(nn.Module
         pool: str = 'conv',
         device: str = 'cuda',
         model_type = "vit_h_adapter_2024_amos_patch512_tqreshape", #""vit_b",
-        checkpoint = "/data/xiebin/nnunet/nnUNet/nnunetv2/sam/sam_checkpoints/sam_vit_h_4b8939.pth",
+        checkpoint = "/data/code/MaskSAM/checkpoints/sam_vit_h_4b8939.pth",
         frames: int=8,
         num_queries: int=24
         # checkpoint: str = "/data/xiebin/nnSeries/nnunetv2/nnUNet/nnunetv2/sam/sam_checkpoints/sam_vit_b_01ec64.pth",
@@ -163,7 +146,7 @@ class SAMAdapter_2024_AMOS_SmallPatch_FinalLayerCNN_TQReshape_Patch512(nn.Module
 
         # get the model
         self.sam_model = sam_model_registry[self.model_type](
-            checkpoint=self.sam_checkpoint_dir,num_frames=frames, num_classes=num_classes, num_queries=num_queries
+            checkpoint=self.sam_checkpoint_dir, num_frames=frames, num_classes=num_classes, num_queries=num_queries
         )
         # model.to(self.device)
 
@@ -362,12 +345,10 @@ class SAMAdapter_2024_AMOS_SmallPatch_FinalLayerCNN_TQReshape_Patch512(nn.Module
     def lxlypxpy_x1y1x2y2(self, bbox):
         return torch.cat([bbox[:,:, 0:1, :], (1-bbox[:,:, 0:1, :]) * bbox[:,:, 1:2, :] + bbox[:,:, 0:1, :]], dim=2)
     
-    def forward(self, input_x, second_stage=False):  #, input_mask):
-
+    def forward(self, input_x, second_stage=False):  #, input_mask):2
         INPUT_B, INPUT_C, INPUT_T, INPUT_H, INPUT_W = input_x.shape
-
         image = self.first_conv(input_x)
-
+        
         # Get predictioin mask
         # image = rearrange(image, '(b t) c h w -> b c t h w', t=INPUT_T)
         image_embeddings = self.sam_model.image_encoder(image)  # (B,256,64,64)
