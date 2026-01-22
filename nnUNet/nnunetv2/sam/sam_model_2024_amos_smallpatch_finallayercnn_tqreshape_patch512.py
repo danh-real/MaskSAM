@@ -96,7 +96,7 @@ class SAMAdapter_2024_AMOS_SmallPatch_FinalLayerCNN_TQReshape_Patch512(nn.Module
         pool: str = 'conv',
         device: str = 'cuda',
         model_type = "vit_h_adapter_2024_amos_patch512_tqreshape", #""vit_b",
-        checkpoint = "/data/code/MaskSAM/checkpoints/sam_vit_h_4b8939.pth",
+        checkpoint = "/data/rlsam2/MaskSAM/checkpoints/sam_vit_h_4b8939.pth",
         frames: int=8,
         num_queries: int=24
         # checkpoint: str = "/data/xiebin/nnSeries/nnunetv2/nnUNet/nnunetv2/sam/sam_checkpoints/sam_vit_b_01ec64.pth",
