@@ -185,7 +185,7 @@ def entry_point():
 if __name__ == '__main__':
     # Example usage - update paths as needed
     convert_sarcoma_dataset(
-        source_folder='/data/code/MaskSAM/DATASETS/nnUnet_raw/Sarcoma',
+        source_folder='/data/rlsam2/MaskSAM/DATASETS/nnUnet_raw/Sarcoma',
         overwrite_target_id=201,
         num_processes=8
     )

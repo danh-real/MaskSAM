@@ -10,7 +10,7 @@
 #SBATCH -A strategic
 
 conda activate medsam2
-cd /data/code/MaskSAM/bash
+cd /data/rlsam2/MaskSAM/bash
 conda init
 conda activate medsam2
 bash MaskSAM_AMOS.sh
