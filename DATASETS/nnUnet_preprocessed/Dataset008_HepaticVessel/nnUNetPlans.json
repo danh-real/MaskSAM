@@ -354,33 +354,27 @@
         "3d_fullres": {
             "data_identifier": "nnUNetPlans_3d_fullres",
             "preprocessor_name": "DefaultPreprocessor",
-            "batch_size": 1,
+            "batch_size": 2,
             "patch_size": [
-                4,
-                512,
-                512
+                64,
+                192,
+                192
             ],
             "median_image_size_in_voxels": [
-                138.0,
-                170.0,
-                138.0
+                150.0,
+                512.0,
+                512.0
             ],
             "spacing": [
-                1.0,
-                1.0,
-                1.0
+                1.5,
+                0.7978515028953552,
+                0.7978515028953552
             ],
             "normalization_schemes": [
-                "ZScoreNormalization",
-                "ZScoreNormalization",
-                "ZScoreNormalization",
-                "ZScoreNormalization"
+                "CTNormalization"
             ],
             "use_mask_for_norm": [
-                true,
-                true,
-                true,
-                true
+                false
             ],
             "resampling_fn_data": "resample_data_or_seg_to_shape",
             "resampling_fn_seg": "resample_data_or_seg_to_shape",
@@ -475,7 +469,7 @@
                             2
                         ],
                         [
-                            2,
+                            1,
                             2,
                             2
                         ]
@@ -515,7 +509,7 @@
                     "nonlin"
                 ]
             },
-            "batch_dice": false
+            "batch_dice": true
         },
         "3d_cascade_fullres": {
             "inherits_from": "3d_fullres",
