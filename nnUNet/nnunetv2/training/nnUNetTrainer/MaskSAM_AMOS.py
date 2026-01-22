@@ -284,7 +284,7 @@ class MaskSAM_AMOS(nnUNetTrainer):
     
     def _get_deep_supervision_scales(self):
         deep_supervision_scales = list(list(i) for i in 1 / np.cumprod(np.vstack(
-            self.configuration_manager.pool_op_kernel_sizes), axis=0))[:-2]
+            self.configuration_manager.pool_op_kernel_sizes), axis=0))[:-3]
         return deep_supervision_scales
 
     def _match_loss(self):
