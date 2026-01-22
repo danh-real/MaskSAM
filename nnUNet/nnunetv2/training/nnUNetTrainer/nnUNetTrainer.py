@@ -336,7 +336,7 @@ class nnUNetTrainer(object):
     def _get_deep_supervision_scales(self):
         if self.enable_deep_supervision:
             deep_supervision_scales = list(list(i) for i in 1 / np.cumprod(np.vstack(
-                self.configuration_manager.pool_op_kernel_sizes), axis=0))[:-1]
+                self.configuration_manager.pool_op_kernel_sizes), axis=0))[:-2]
         else:
             deep_supervision_scales = None  # for train and val_transforms
         return deep_supervision_scales
