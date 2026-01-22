@@ -184,7 +184,7 @@
             "preprocessor_name": "DefaultPreprocessor",
             "batch_size": 1,
             "patch_size": [
-                8,
+                4,
                 512,
                 512
             ],
